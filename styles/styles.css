@@ -19,6 +19,8 @@
   --color-grey-6: #12181b;
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --sendEmail-hover: #1e8449;
+  --sendEmail-shadow: rgba(39, 174, 96, .15);
 }
 
 .light-mode {
@@ -33,6 +35,8 @@
   --color-grey-4: #454e56;
   --color-grey-5: #f8f8f8;
   --color-grey-6: #12181b;
+  --sendEmail-hover: #F082AC;
+  --sendEmail-shadow: #F082AC;
 }
 
 body {
@@ -709,6 +713,54 @@ section {
   transform: translate(-50%, -50%);
   font-weight: 800;
   font-size: 6.3rem;
+}
+
+.sendEmail-btn {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  backface-visibility: hidden;
+  background-color: var(--color-secondary);
+  border-radius: 30px;
+  border-style: none;
+  border: none;
+  box-shadow: var(--sendEmail-shadowrgba) 0 4px 9px;
+  box-sizing: border-box;
+  color: var(--color-white);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: inherit;
+  font-weight: inherit;
+  letter-spacing: normal;
+  line-height: 1.5;
+  outline: none;
+  overflow: hidden;
+  padding: 0.8rem 1.1rem;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.3s;
+  -moz-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.sendEmail-btn:hover {
+  background-color: var(--sendEmail-hover);
+  opacity: 1;
+  transform: translateY(0);
+  transition-duration: 0.35s;
+}
+.sendEmail-btn:active {
+  transform: translateY(2px);
+  transition-duration: 0.35s;
+}
+.sendEmail-btn:hover {
+  box-shadow: var(--sendEmail-shadow) 0 6px 12px;
 }
 
 @media screen and (max-width: 600px) {
